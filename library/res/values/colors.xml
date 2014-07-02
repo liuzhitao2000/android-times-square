@@ -7,7 +7,7 @@
   <color name="calendar_selected_day_bg">#ff379bff</color>
   <color name="calendar_selected_range_bg">#ff96caff</color>
   <color name="calendar_text_inactive">#40778088</color>
-  <color name="calendar_text_active">#ff778088</color>
+  <color name="calendar_text_active">#ff4dbdff</color>
   <color name="calendar_text_selected">#ffffffff</color>
   <color name="calendar_text_unselectable">#7f778088</color>
 </resources>
