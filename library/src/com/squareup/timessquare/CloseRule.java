@@ -126,7 +126,7 @@ public class CloseRule {
             } else {
                 mCloseRules.remove(encode(cal.getTime()));
             }
-            
+            cal.add(Calendar.DATE, 1);
         }
         return this;
     }
