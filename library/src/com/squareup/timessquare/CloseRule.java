@@ -113,6 +113,24 @@ public class CloseRule {
         return this;
     }
 
+    public CloseRule withOpenDaysOfMonth(int[] days) {
+        if (days == null) {
+            return this;
+        }
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime((Date)mFrom.clone());
+        while (!sameDate(cal.getTime(), mTo)) {
+            if (!in(cal.get(Calendar.DAY_OF_MONTH), days)) {
+                mCloseRules.add(encode(cal.getTime()));
+            } else {
+                mCloseRules.remove(encode(cal.getTime()));
+            }
+            cal.add(Calendar.DATE, 1);
+        }
+        return this;
+    }
+
     public CloseRule withOpenMonth(int month) {
         Calendar cal = Calendar.getInstance();
         cal.setTime((Date)mFrom.clone());
