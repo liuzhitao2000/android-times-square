@@ -162,9 +162,7 @@ public class CloseRule {
             Calendar order = Calendar.getInstance();
             order.set(Calendar.HOUR_OF_DAY, cal.get(Calendar.HOUR_OF_DAY));
             order.set(Calendar.MINUTE, cal.get(Calendar.MINUTE));
-            if (order.getTime().after(now)) {
-                mCloseRules.remove(encode(now));
-            } else {
+            if (order.getTime().before(now)) {
                 mCloseRules.add(encode(now));
             }
         } else {

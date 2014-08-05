@@ -77,7 +77,7 @@ public class CalendarCellView extends TextView {
     }
 
     if (isToday) {
-      mergeDrawableStates(drawableState, STATE_TODAY);
+//      mergeDrawableStates(drawableState, STATE_TODAY);
     }
 
     if (rangeState == MonthCellDescriptor.RangeState.FIRST) {
